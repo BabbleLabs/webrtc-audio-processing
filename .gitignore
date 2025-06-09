@@ -28,3 +28,6 @@ ltmain.sh
 missing
 mkinstalldirs
 stamp-*
+
+.DS_Store
+m4/

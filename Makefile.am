@@ -21,3 +21,5 @@ nobase_webrtcinclude_HEADERS = webrtc/base/arraysize.h \
 EXTRA_DIST = NEWS \
 	     README.md \
 	     UPDATING.md
+
+ACLOCAL_AMFLAGS = -I m4

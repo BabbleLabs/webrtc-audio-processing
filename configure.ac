@@ -1,4 +1,4 @@
-AC_INIT([webrtc-audio-processing], [0.2])
+AC_INIT([webrtc-audio-processing],[0.2])
 AM_INIT_AUTOMAKE([dist-xz subdir-objects tar-ustar])
 
 AC_SUBST(LIBWEBRTC_AUDIO_PROCESSING_VERSION_INFO, [1:0:0])
@@ -10,12 +10,12 @@ AC_CANONICAL_HOST
 
 AC_PROG_CC
 AC_PROG_CXX
-AC_PROG_LIBTOOL
+LT_INIT
 AC_PROG_INSTALL
 AM_PROG_AS
 
-AC_LANG_C
-AC_LANG_CPLUSPLUS
+AC_LANG([C])
+AC_LANG([C++])
 
 AC_ARG_WITH([ns-mode],
 	    AS_HELP_STRING([--with-ns-mode=float|fixed], [Noise suppresion mode to use. Default is float]))
@@ -119,5 +119,7 @@ webrtc/modules/Makefile
 webrtc/modules/audio_coding/Makefile
 webrtc/modules/audio_processing/Makefile
 ])
+
+AC_CONFIG_MACRO_DIRS([m4])
 
 AC_OUTPUT
