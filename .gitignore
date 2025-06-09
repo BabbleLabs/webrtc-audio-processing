@@ -30,4 +30,11 @@ mkinstalldirs
 stamp-*
 
 .DS_Store
+
 m4/
+*.wav
+*.zip
+
+.vscode/
+webrtc/modules/audio_processing/aecm/run_aecm
+commit_log.txt

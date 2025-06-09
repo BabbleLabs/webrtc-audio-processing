@@ -228,10 +228,12 @@ int32_t WebRtcAecm_BufferFarend(void *aecmInst, const int16_t *farend,
     }
 
     // TODO: Is this really a good idea?
+    #if 0
     if (!aecm->ECstartup)
     {
         WebRtcAecm_DelayComp(aecm);
     }
+    #endif
 
     WebRtc_WriteBuffer(aecm->farendBuf, farend, nrOfSamples);
 
@@ -700,3 +702,25 @@ static int WebRtcAecm_DelayComp(AecMobile* aecm) {
 
     return 0;
 }
+
+
+//--------------------------------------------------------------------
+//  Get / Set the ECstartup flag
+//--------------------------------------------------------------------
+
+int get_ECstartup(void *aecmInst)
+{
+    AecMobile* aecm = aecmInst;
+
+    return aecm->ECstartup;
+}
+
+
+void set_ECstartup(void *aecmInst, int ECstartup)
+{
+    AecMobile* aecm = aecmInst;
+
+    aecm->ECstartup = ECstartup;
+}
+
+

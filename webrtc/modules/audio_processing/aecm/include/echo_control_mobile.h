@@ -212,6 +212,16 @@ size_t WebRtcAecm_echo_path_size_bytes();
  */
 int32_t WebRtcAecm_get_error_code(void *aecmInst);
 
+
+//--------------------------------------------------------------------
+//  Get/Set the ECstartup flag
+//--------------------------------------------------------------------
+
+int get_ECstartup(void *aecmInst);
+
+void set_ECstartup(void *aecmInst, int ECstartup);
+
+
 #ifdef __cplusplus
 }
 #endif
