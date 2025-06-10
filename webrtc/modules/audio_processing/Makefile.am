@@ -58,7 +58,6 @@ libwebrtc_audio_processing_la_SOURCES = include/audio_processing.h \
 					transient/transient_suppressor.h \
 					transient/wpd_node.h \
 					transient/wpd_tree.h \
-					transient/click_annotate.cc \
 					transient/file_utils.cc \
 					transient/moving_moments.cc \
 					transient/transient_detector.cc \
