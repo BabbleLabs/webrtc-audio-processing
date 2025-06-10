@@ -41,7 +41,7 @@ AS_CASE(["${host}"],
         ],
     [*-*linux*],
         [
-         OS_CFLAGS="-DWEBRTC_LINUX"
+         OS_CFLAGS="-DWEBRTC_LINUX -fPIC"
          PLATFORM_CFLAGS="-DWEBRTC_POSIX"
         ],
     [*-*darwin*],

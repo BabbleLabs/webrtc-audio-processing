@@ -20,4 +20,4 @@ cd webrtc/modules/audio_processing/aecm
 echo
 echo building run_aecm
 
-g++ -std=c++17 -O3 -Wall -I$CXXOPTS_INC_DIR -I$AUDIOFILE_INC_DIR -I$CPP_UTILS_PATH -I$WEBRTC_AUDIO_PROCESSING_PATH $WEBRTC_AUDIO_PROCESSING_LIB run_aecm.cpp -o run_aecm
+g++ -std=c++17 -O3 -Wall -I$CXXOPTS_INC_DIR -I$AUDIOFILE_INC_DIR -I$CPP_UTILS_PATH -I$WEBRTC_AUDIO_PROCESSING_PATH run_aecm.cpp $WEBRTC_AUDIO_PROCESSING_LIB -o run_aecm

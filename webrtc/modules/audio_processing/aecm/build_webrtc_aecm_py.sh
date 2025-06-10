@@ -28,6 +28,8 @@ CPP_OPTIONS="-std=c++17 -O3 -Wall"
 
 CPP_SRC=webrtc_aecm_py.cpp
 
+LIBS=$WEBRTC_AUDIO_PROCESSING_LIB
+
 LIB_NAME=webrtc_aecm_py
 
 OS="`uname`"
@@ -56,7 +58,7 @@ esac
 
 LIB_EXT=$(python3-config --extension-suffix)
 
-g++ $CPP_OPTIONS -I$CPP_UTILS_PATH -I$WEBRTC_AUDIO_PROCESSING_PATH -shared $LIB_OPT $(python3 -m pybind11 --includes) $WEBRTC_AUDIO_PROCESSING_LIB $CPP_SRC -o $LIB_NAME$LIB_EXT
+g++ $CPP_OPTIONS -I$CPP_UTILS_PATH -I$WEBRTC_AUDIO_PROCESSING_PATH -shared $LIB_OPT $(python3 -m pybind11 --includes) $CPP_SRC $LIBS -o $LIB_NAME$LIB_EXT
 
 LIB_EXPORT_DIR=$WORKSPACE_PATH/room_audio_sim/libs/webrtc/$LIB_DIR
 
