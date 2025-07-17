@@ -37,4 +37,5 @@ m4/
 
 .vscode/
 webrtc/modules/audio_processing/aecm/run_aecm
+webrtc/common_audio/vad/run_webrtc_vad
 commit_log.txt
